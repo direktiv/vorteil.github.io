@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: default
-title: Welcome | Vorteil.io
+title: Documentation | Vorteil.io
 nav_exclude: true
 ---
 
