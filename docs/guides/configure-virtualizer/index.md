@@ -40,7 +40,7 @@ Supports Windows, Mac, and Linux. Download links for the VirtualBox installers c
 Supports Linux only. KVM must be installed on the local machine, and can be acquired through the use of a package manager. On Ubuntu, use the following command:
 
 ```
-sudo apt-get install qemu-kvm libvirt-bin virtinst bridge-utils cpu-checker
+sudo apt-get install qemu-kvm
 ```
 
 Before running anything on Firecracker, execute the following command in a separate terminal window (this operation spawns a DHCP server, HTTP listener, and creates a bridged network device if necessary). This process will remain active until manually terminated:
