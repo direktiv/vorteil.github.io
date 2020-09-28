@@ -38,7 +38,6 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
-
 footer_content: "Copyright &copy; 2020 Vorteil.io. Support website for <a href=\"https://vorteil.io\">Vorteil.io</a>"
 
 # Exclude from processing.
