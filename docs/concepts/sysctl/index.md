@@ -21,7 +21,7 @@ VCFG
 CLI
 
 ```
-$ vorteil run local:vorteil/helloworld --sysctl net.ipv4.ip_forward=1
+$ vorteil run ./helloworld --sysctl net.ipv4.ip_forward=1
 ```
 
 The above examples will result in `/proc/sys/net/ipv4/ip_forward` being created, with the value `1`.
