@@ -1,5 +1,5 @@
 ---
-title: Configure a provisioner
+title: Configuring a provisioner
 nav_order: 2
 has_children: true
 layout: default
