@@ -37,8 +37,7 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
-
-footer_content: "Copyright &copy; 2020 Vorteil.io. Support Website for <a href=\"https://vorteil.io\">Vorteil.io</a>"
+footer_content: "Copyright &copy; 2020 Vorteil.io. Support website for <a href=\"https://vorteil.io\">Vorteil.io</a>"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
