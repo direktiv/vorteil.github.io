@@ -36,28 +36,40 @@ nav_exclude: true
         <p>The Vorteil kernel is small (less than 10 MiB), fast (boots in milliseconds), and secure (no shell, open ports or unsecure libraries or components). There is no need to patch the operating system, nor secure any additional services or antivirus programs.</p>
         <div class="container">
             <div class="section">
-                <img src="/assets/quickstarts.png" alt="Getting Started" class="image-section" />
-                <p>Getting Started</p>
+                <a href="/docs/getting-started/">
+                    <img src="/assets/quickstarts.png" alt="Getting Started" class="image-section" />
+                    <p>Getting Started</p>
+                </a>
             </div>
             <div class="section">
-                <img src="/assets/lightbulb.png" alt="Concepts" class="image-section" />
-                <p>Concepts</p>
+                <a href="/docs/concepts/">
+                    <img src="/assets/lightbulb.png" alt="Concepts" class="image-section" />
+                    <p>Concepts</p>
+                </a>
             </div>
             <div class="section">
-                <img src="/assets/tutorial.png" alt="Guides" class="image-section" />
-                <p>Guides</p>
+                <a href="/docs/guides/">
+                    <img src="/assets/tutorial.png" alt="Guides" class="image-section" />
+                    <p>Guides</p>
+                </a>
             </div>
             <div class="section">
-                <img src="/assets/book.png" alt="Debugging" class="image-section" />
-                <p>Debugging</p>
+                <a href="/docs/debugging/">
+                    <img src="/assets/book.png" alt="Debugging" class="image-section" />
+                    <p>Debugging</p>
+                </a>
             </div>
             <div class="section">
-                <img src="/assets/vorteil.png" alt="VCFGs" class="image-section" />
-                <p>VCFG</p>
+                <a href="/docs/vcfg-reference/">
+                    <img src="/assets/vorteil.png" alt="VCFGs" class="image-section" />
+                    <p>VCFG</p>
+                </a>
             </div>
             <div class="section">
+            <a href="/docs/faqs/">
                 <img src="/assets/faqs.png" alt="FAQs" class="image-section" />
                 <p>FAQs</p>
+                </a>
             </div>
         </div>
     </body>

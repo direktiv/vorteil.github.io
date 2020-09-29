@@ -1,9 +1,9 @@
 ---
 title: Advanced logging
-nav_order: 2
+nav_order: 1
 has_children: false
 layout: default
-parent: Virtual Machine Configuration
+parent: Monitoring
 grand_parent: Guides
 ---
 
