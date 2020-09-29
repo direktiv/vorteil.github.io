@@ -12,7 +12,7 @@ Vorteil is an operating system for running cloud applications on micro virtual m
 
 <p align="center">
   <a href="https://github.com/vorteil/vorteil">
-    <img src="https://github.com/vorteil/vorteil/raw/master/assets/images/terminal.gif" alt="terminal">
+    <img src="/assets/getting-started.gif" alt="terminal">
   </a>
 </p>
 
