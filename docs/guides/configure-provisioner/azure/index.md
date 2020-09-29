@@ -36,6 +36,8 @@ The command will create a file at ./azure.provisioner, which is a base64-encoded
 
 ## Provisioning an image
 
-Now that a provisioner file has been created, it can be passed in via the --provisioner flag when performing a provision operation:
+Now that a provisioner file has been created, it can be passed in via the `--provisioner` flag when performing a provision operation:
 
+```
 vorteil images provision BUILDABLE --provisioner=./azure.provisioner --name myimage
+```

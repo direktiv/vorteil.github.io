@@ -8,7 +8,7 @@ parent: Debugging
 
 # Running shell scripts
 
-A lot of pre-existing applications rely on shellscripts to launch properly, which has the potential make things difficult when attempting to port them to a Vorteil application. To counter this problem, "shell-mode" was created.
+A lot of pre-existing applications rely on shellscripts to launch properly, which has the potential to make things difficult when attempting to port them to a Vorteil application. To counter this problem, "shell-mode" was created.
 
 
 ## What is "shell-mode"?
