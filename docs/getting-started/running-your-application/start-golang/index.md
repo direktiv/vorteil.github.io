@@ -77,8 +77,6 @@ To compile your code into a binary use Go’s ‘build’ command.
 $ go build -o server
 ```
 
-The ‘ls’ tool on Mac and Linux lists the contents of your working directory; if you’re working on Windows you can use ‘dir’ instead. Another difference on Windows is that the binary will actually be called “server.exe”.
-
 The Vorteil kernel only supports 64-bit x86 Linux programs, so if you’re not running a 64-bit x86 Linux system you’ll have to cross-compile your code. It’s usually pretty painless cross-compiling in Go: you just need to set some environment variables before calling ‘go build’.
 
 On Mac:
@@ -109,6 +107,8 @@ $ ls -a
 .  ..  .default.vcfg  server  .vorteilproject
 ```
 
+The ‘ls’ tool on Mac and Linux lists the contents of your working directory; if you’re working on Windows you can use ‘dir’ instead. Another difference on Windows is that the binary will actually be called “server.exe”.
+
 As you can see in the first command we create a new Vorteil project. The second command was used to show the project files the Vorteil CLI created. Now that we have successfully created a Vorteil project we will configure the projects Vorteil Configuration (“.default.vcfg”).
 
 ## Configuration
@@ -124,7 +124,7 @@ Currently, the VCFG should look like this:
 
 The VCFG is the Vorteil configuration file. There are many fields that may be set, but we will only be looking at three in this article. For a more in-depth article of VCFG please read the [VCFG Reference Guide](/docs/vcfg-reference/).
 
-The first field we will look at is the `binary` field. By default, binary field is empty, but because we provided the `--programs.0.binary` flag when creating the project, the Vorteil CLI set the `binary` field of the `0`th program to `"server"`.
+The first field we will look at is the `binary` field. By default, the binary field is empty, but because we provided the `--programs.0.binary` flag when creating the project, the Vorteil CLI set the `binary` field of the `0`th program to `"server"`.
 
 The second field we must set is underneath a map, named “network”, and contains a list of ports that our web server will serve on. Because our server is set to use port 7474 we will set “http” to equal [“7474”].
 
