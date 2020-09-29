@@ -95,7 +95,7 @@ We can change our logging configuration to monitor application logs by simply ch
 
 Once again, run the app. After a few seconds, the logging output should appear.
 
-This instructs the Vorteil app to log all data from files ending with '.log' in the `/apache-tomcat-9.0.12/logs/` directory. Because this directory is empty on startup, Vorteil will create the files in memory only, and will not create an real files on the filesystem. Once more, start the Tomcat application. Logs from these files should now appear.
+This instructs the Vorteil app to log all data from files ending with '.log' in the `/apache-tomcat-9.0.12/logs/` directory. Because this directory is empty on startup, Vorteil will create the files in memory only, and will not create any real files on the filesystem. Once more, start the Tomcat application. Logs from these files should now appear.
 
 **Example: stdout logging**
 
