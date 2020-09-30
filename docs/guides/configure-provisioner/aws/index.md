@@ -37,8 +37,8 @@ The command will create a file at `./aws.provisioner`, which is a base64-encoded
 
 ## Provisioning an image
 
-Now that a provisioner file has been created, it can be passed in via the `--provisioner` flag when performing a provision operation:
+Now that a provisioner file has been created, it can be used in the provision command to direct our vorteil BUILDABLE. To provision with our new provisioner use the following command:
 
 ```
-vorteil images provision BUILDABLE --provisioner=./aws.provisioner --name myimage
+vorteil images provision BUILDABLE ./aws.provisioner --name myimage
 ```
