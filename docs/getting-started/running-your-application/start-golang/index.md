@@ -157,7 +157,7 @@ Now that we’re all set up, running is super easy. Simply run the following the
 
 ```
 $ vorteil run
-Provisioning VM [=======================================================================] 100.00% 0s
+Writing image done [==============================================================================] 100.00% 0s
 [INFO 0/0] 0:  vorteil kernel 0.3.6-1a114a7
 [INFO 0/6] 03:47:21:595021:  ip: 10.0.2.15
 [INFO 0/6] 03:47:21:595793:  mask: 255.255.255.0
