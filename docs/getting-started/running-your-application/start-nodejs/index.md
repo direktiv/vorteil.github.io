@@ -30,7 +30,7 @@ Once inside the newly-created project directory, executing the following command
 
 ```
 $ vorteil run
-Provisioning VM [===================================================] 100.00% 3s
+Writing image done [===================================================] 100.00% 3s
 Warning: VM has network cards but no defined ports (hypervisor=virtualbox, vm=nodejs-jazp)
 [INFO 0/0] 0:  vorteil kernel 0.3.7-9c56de7
 [INFO 0/6] 04:27:39:654082:  ip: 10.0.2.15
@@ -96,7 +96,7 @@ After making these changes we can try running the application using Vorteil agai
 
 ```
 $ vorteil run
-Provisioning VM [===================================================] 100.00% 2s
+Writing image done [===================================================] 100.00% 2s
 network settings
  • http:8080 → localhost:42885
 [INFO 0/0] 0:  vorteil kernel 0.3.7-9c56de7
