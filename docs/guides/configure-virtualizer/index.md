@@ -42,9 +42,15 @@ Supports Linux only. KVM must be installed on the local machine, and can be acqu
 ```
 sudo apt-get install qemu-kvm
 ```
-
-Before running anything on Firecracker, execute the following command in a separate terminal window (this operation spawns a DHCP server, HTTP listener, and creates a bridged network device if necessary). This process will remain active until manually terminated:
+Firecracker must be downloaded and stored in the /usr/bin/ directory. Releases for the Firecracker binary can be found [here](https://github.com/firecracker-microvm/firecracker/releases). The following commands will download and install Firecracker:
 
 ```
-sudo ./vorteil firecracker-setup
+wget https://github.com/firecracker-microvm/firecracker/releases/download/v0.22.0/firecracker-v0.22.0-x86_64
+sudo mv firecracker-v0.22.0-x86_64 /usr/bin/firecracker
+sudo chmod +x /usr/bin/firecracker
+```
+
+Any commands related to Firecracker must be run with sudo, due to the need to create bridge and tap devices when spawning a machine. 
+```
+sudo ./vorteil run PACKAGE --platform firecracker
 ```
