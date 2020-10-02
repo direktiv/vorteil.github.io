@@ -87,7 +87,7 @@ VCFG Example:
 
 ### WAIT_PORT
 
-The WAIT_PORT instruction will wait for the specified port(s) to become available before the program will be executed. If no network interface is specified, defaults to `eth0`.
+The WAIT_PORT instruction will wait for the specified port(s) to become available on a network interface before the program will be executed.
 
 ```
 WAIT_PORT [network_interface] <value>...
@@ -96,9 +96,6 @@ Arguments:
 	value	Port number
 
 VCFG Example:
-
-	[[program]]
-	  bootstrap = ["WAIT_PORT 8080 8081 8082"] # wait for ports 8080, 8081, and 8082 to become available
 
 	[[program]]
 	  bootstrap = ["WAIT_PORT if=eth0 8080"] # wait for port 8080 to become available on interface eth0
