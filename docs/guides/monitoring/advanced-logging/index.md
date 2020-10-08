@@ -40,7 +40,7 @@ Includes all messages printed to stdout on the system, regardless of which `[[pr
 This tutorial consists of two parts. The first part describes a basic logging set up, useful for testing. The second part explains more complex application logging. We will use the Tomcat package from the public Vorteil 'apps' repository (https://apps.vorteil.io). Download and extract the package.
 
 ```
-$ wget -o tomcat.vorteil https://apps.vorteil.io/file/vorteil/tomcat
+$ wget -O tomcat.vorteil https://apps.vorteil.io/file/vorteil/tomcat
 $ vorteil unpack tomcat.vorteil
 ```
 

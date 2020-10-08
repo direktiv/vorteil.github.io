@@ -14,7 +14,7 @@ In this guide we'll show you how to turn a Vorteil project into a virtual disk i
 If you do not already have a Vorteil project available to follow this guide with, download a package from [apps.vorteil.io](https://apps.vorteil.io/) and unpack it to create a project:
 
 ```
-wget -o helloworld.vorteil https://apps.vorteil.io/file/vorteil/helloworld
+wget -O helloworld.vorteil https://apps.vorteil.io/file/vorteil/helloworld
 vorteil unpack ./helloworld.vorteil ./helloworld
 ```
 

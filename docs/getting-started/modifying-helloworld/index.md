@@ -9,7 +9,7 @@ parent: Getting Started
 # Modifying "Hello World"
 
 ```sh
-wget -o helloworld.vorteil https://apps.vorteil.io/file/vorteil/helloworld
+wget -O helloworld.vorteil https://apps.vorteil.io/file/vorteil/helloworld
 vorteil unpack helloworld.vorteil helloworld
 ls helloworld
 ```
