@@ -10,7 +10,7 @@ parent: Concepts
 
 Configuration of Vorteil’s runtime is handled entirely by modifying an app’s configuration file (VCFG).
 
-Some tools may hide this process from you, such as when the CLI makes one-time changes to the VCFG when requested via flags. At other times some VCFG values will be overwritten by the compiler at its discretion. 
+Some tools may hide this process from you, such as when the CLI makes one-time changes to the VCFG when requested via flags. At other times some VCFG values will be overwritten by the compiler at its discretion.
 
 Just about every field in a VCFG is relevant to the runtime, with the exception of fields under the `info` and `vm` section and the port fields under the `network` section, all of which are instead used by tools to manage or describe apps from within.
 
@@ -79,3 +79,11 @@ These variables will have the hostname of the virtual machine. The `HOSTNAME` wi
 ### IP and EXT_IP
 
 These variables will have the IPv4 address (as a string) for their respective network interfaces on the virtual machine. `IP` will have the value the kernel has set, whilst the `EXT_HOSTNAME` will have the value the cloud provider is allowing people to connect to from the internet. Both variables will be set to useful values on any environment, but only as many as there are network interfaces.
+
+### USERDATA
+
+The environment variable USERDATA is getting populated differently for each cloud provider.
+
+- Azure: Text in the "Custom data" (Advanced Tab)
+- Google Cloud: Text stored in "Metadata" key "vorteil"
+- Amazon: Text in "User data" (as text)
