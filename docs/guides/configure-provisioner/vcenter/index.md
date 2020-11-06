@@ -30,7 +30,7 @@ You'll also need an account with access to a VMware ESXi/vCenter environment, wi
 
 ## Creating an VMware ESXi/vCenter provisioner file
 
-To configure an VMware ESXi/vCenter provisioner takes just one command after you've found all of the relevant information from the 'Before you start' section above. Dummy values for each of the three fields listed in the 'Before you start' section are used here as well, use your own values to make vCenter work.
+Configuring a VMware ESXi/vCenter provisioner takes just one command after you've found all of the relevant information from the 'Before you start' section above. Dummy values for each of the six fields listed in the 'Before you start' section are used here as well, use your own values to make vCenter work.
 
 ```
 $ vorteil provisioners new vcenter ./vcenter.provisioner --username="administrator@vsphere.local" --password="SuperSecret" \
