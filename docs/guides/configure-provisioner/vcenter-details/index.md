@@ -1,11 +1,13 @@
 ---
-title: Getting VMware ESXi/vCenter Details (Enterprise Edition)
+title: VMware ESXi - Getting Details
 nav_order: 4
 has_children: false
 layout: default
 parent: Configuring a provisioner
 grand_parent: Guides
 ---
+
+**VMware ESXi/vCenter is only available in the enterprise edition of the Vorteil Tools**
 
 In some cases (development, test or standalone environments) a user would like to create a ESXi/vCenter provisioner. For cases like these, the VMware API requires the datacentre and cluster to be configured (similar to that of a vCenter). The datapoints for these attributes are available via the VMware Web Client Management Object Browser (MOB). To connect to the MOB of an ESXi server, the following URL is used:
 

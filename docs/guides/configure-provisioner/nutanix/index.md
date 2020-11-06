@@ -1,11 +1,12 @@
 ---
-title: Nutanix (Enterprise Edition)
+title: Nutanix
 nav_order: 5
 has_children: false
 layout: default
 parent: Configuring a provisioner
 grand_parent: Guides
 ---
+**Nutanix is only available in the enterprise edition of the Vorteil Tools**
 
 # Nutanix
 
@@ -27,8 +28,9 @@ You'll also need an account with access to a Nutanix environment, with permissio
 
 Configuring a Nutanix provisioner takes just one command after you've found all of the relevant information from the 'Before you start' section above. Dummy values for each of the three fields listed in the 'Before you start' section are used here as well, use your own values to make vCenter work.
 
+```sh
+$ vorteil provisioners new nutanix ./nutanix.provisioner --username admin --password pass --host 192.168.1.101:9440
 ```
-$ vorteil provisioners new nutanix ./nutanix.provisioner --username admin --password pass --host 192.168.1.101:9440```
 
 The command will create a file at `./nutanix.provisioner`, which is a base64-encoded version of the information required to provision to Nutanix. An optional flag, `--passphrase`, can be used when creating the provisioner to encrypt the resulting payload. The passphrase will be required when attempting to use the provisioner in the future.
 

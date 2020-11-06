@@ -1,11 +1,12 @@
 ---
-title: VMware ESXi/vCenter (Enterprise Edition)
+title: VMware ESXi/vCenter
 nav_order: 3
 has_children: false
 layout: default
 parent: Configuring a provisioner
 grand_parent: Guides
 ---
+**VMware ESXi/vCenter is only available in the enterprise edition of the Vorteil Tools**
 
 # VMware ESXi/vCenter
 
@@ -26,15 +27,16 @@ You'll also need an account with access to a VMware ESXi/vCenter environment, wi
     - username: username of an appropriately authorized account
     - password: password of an appropriate authorized account
 
-!?*To gather these details for ESXI you can follow our [tutorial](/docs/For-Users/Tutorials/Adding-an-ESXI-Provisioner-using-the-vCenter-Provisioner)*
+*To gather these details for ESXI you can follow our [tutorial](/docs/guides/configure-provisioner/vcenter-details)*
 
 ## Creating an VMware ESXi/vCenter provisioner file
 
 Configuring a VMware ESXi/vCenter provisioner takes just one command after you've found all of the relevant information from the 'Before you start' section above. Dummy values for each of the six fields listed in the 'Before you start' section are used here as well, use your own values to make vCenter work.
 
-```
+```sh
 $ vorteil provisioners new vcenter ./vcenter.provisioner --username="administrator@vsphere.local" --password="SuperSecret" \
-  --datacenter=MyDatacenter --datastore=MyDatastore --host-cluster=MyHostCluster --address="https://vcsa.example.com"```
+  --datacenter=MyDatacenter --datastore=MyDatastore --host-cluster=MyHostCluster --address="https://vcsa.example.com"
+```
 
 The command will create a file at `./vcenter.provisioner`, which is a base64-encoded version of the information required to provision to VMware ESXi/vCenter. An optional flag, `--passphrase`, can be used when creating the provisioner to encrypt the resulting payload. The passphrase will be required when attempting to use the provisioner in the future.
 
