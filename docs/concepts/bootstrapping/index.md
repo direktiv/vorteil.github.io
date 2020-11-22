@@ -100,3 +100,20 @@ VCFG Example:
 	[[program]]
 	  bootstrap = ["WAIT_PORT if=eth0 8080"] # wait for port 8080 to become available on interface eth0
 ```
+
+### GET
+
+The GET instruction will execute the GET request and store the response in the file provided by the bootsrap command.
+
+```
+GET <url> <path>
+
+Arguments:
+	url     URL to get
+	path	Filepath to store reponse in
+
+VCFG Example:
+
+	[[program]]
+	  bootstrap = ["GET http://www.google.com" /myfile] # get google.com and store it in /myfile
+```
