@@ -21,7 +21,7 @@ This guide isn’t meant to be an introduction to Java, but there a few things y
 
 Let’s start by fetching our standalone public application for Java and extracting it into a folder.
 
-```
+```sh
 $ vorteil unpack https://apps.vorteil.io/file/vorteil/java18 ./java18/
 $ cd java18/
 $ ls -A
@@ -32,7 +32,7 @@ The “-A” flag instructs the ls tool to show hidden files, which is helpful h
 
 We will now be working from java18 directory from now on.
 
-```
+```sh
 $ vorteil run
 Preparing VM [============================================================================================================================] 100.00% 2s
 Warning: VM has network cards but no defined ports (hypervisor=kvm, vm=java18-ymji)
@@ -70,13 +70,13 @@ public class HelloWorld {
 
 Java can’t run this application yet as it is uncompiled code. We need to use ‘javac’ which is located in ‘jdk1.8.0_172/bin/javac’ of the package filesystem.
 
-```
+```sh
 $ jdk1.8.0_172/bin/javac HelloWorld.java
 ```
 
 If the above command fails you may need to chmod +x the binary.
 
-```
+```sh
 $ chmod +x jdk1.8.0_172/bin/javac
 ```
 
@@ -104,7 +104,7 @@ This shows that we could easily create our own java class that we can plug and p
 
 After making these changes we can try running the application using Vorteil again.
 
-```
+```sh
 $ vorteil run
 [    0.500000]  #vorteil-19.10.1 (59f7d8610) SMP 10-10-2019 (Linux version 5.2.20+)
 [    0.510000]  ip: 10.0.2.15

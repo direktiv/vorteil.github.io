@@ -73,7 +73,7 @@ Now that we have the code, we must compile it.
 
 To compile your code into a binary use Go’s ‘build’ command.
 
-```
+```sh
 $ go build -o server
 ```
 
@@ -81,7 +81,7 @@ The Vorteil kernel only supports 64-bit x86 Linux programs, so if you’re not r
 
 On Mac:
 
-```
+```sh
 $ GOOS=linux GOARCH=amd64 go build -o server
 ```
 
@@ -89,7 +89,7 @@ The same command works on Linux, but is only necessary if you’re running a ver
 
 And on Windows:
 
-```
+```sh
 $ set GOOS=linux
 $ set GOARCH=amd64
 $ go build -o server
@@ -101,7 +101,7 @@ If you needed to cross-compile the program, you won’t be able to execute it an
 
 Now that we have our web server ELF Binary we need to create a Vorteil Project. Open your terminal where your server ELF binary will exist and run the following two commands.
 
-```
+```sh
 $ vorteil projects new server
 $ ls -a
 .  ..  .default.vcfg  server  .vorteilproject
@@ -145,7 +145,7 @@ Now that our VCFG has been configured it should look like this:
 
 The final step before we are able to run our Vorteil instance is to import any shared object dependencies. ELF binaries are dependent on shared objects to run, and Vorteil does not include these by default. Each ELF binary needs different libraries to run, and placing only the ones required is part of optimizing a Vorteil project. The Vorteil CLI has a feature, which we will use, that will scan the files contained within a project and gather any shared objects found on the host system:
 
-```
+```sh
 $ vorteil projects import-shared-objects
 ```
 
@@ -155,7 +155,7 @@ Alternatively, Golang provides ways of compiling code in to statically-linked bi
 
 Now that we’re all set up, running is super easy. Simply run the following the command when inside the projects directory.
 
-```
+```sh
 $ vorteil run
 Writing image done [==============================================================================] 100.00% 0s
 [INFO 0/0] 0:  vorteil kernel 0.3.6-1a114a7
@@ -167,8 +167,8 @@ Writing image done [============================================================
 Server is Starting
 ```
 
-Now since we are running on a local non-bridged hypervisor our IP will be [http://localhost7474/](http://localhost7474/).
+Now since we are running on a local non-bridged hypervisor our IP will be [http://localhost:7474/](http://localhost:7474/).
 
 Visiting this URL in your browser should serve you a blank page with text that says “Hello, !”. To see the full functionality of our little web server we can simply change to URL to [http://localhost:7474/Vorteil](http://localhost:7474/Vorteil), and now we will be displayed with text that says “Hello, Vorteil!”.
 
-That’s it. We have successfully written a Go web server, created a Vorteil project, configured the project to work with our web server and, tested our web server running on Vorteil.
+That’s it. We have successfully written a Go web server, created a Vorteil project, configured the project to work with our web server, and tested our web server running on Vorteil.

@@ -19,7 +19,7 @@ Please make sure you have Vorteil and at least one [supported hypervisor](/docs/
 
 This guide isn’t meant to be an introduction to Python, but there are a few things you’ll need to do to follow along. Let’s start by fetching our standalone application for Python and extracting it into a folder.
 
-```
+```sh
 $ vorteil unpack https://apps.vorteil.io/file/vorteil/python3 ./python3/
 $ cd python3
 ```
@@ -30,13 +30,13 @@ Following the operations successful completion, you will have the python3 packag
 
 First let’s run our newly exported package using the power of Vorteil. Everything has come pre-configured to use the included python Python 3 ELF binary and run the included hello.py script so all we have to do is run the following command while inside the projects directory:
 
-```
-vorteil run
+```sh
+$ vorteil run
 ```
 
 You should see something similar to what is shown below:
 
-```
+```sh
 [    0.510000]  #vorteil-19.10.1 (59f7d8610) SMP 10-10-2019 (Linux version 5.2.20+)
 [    0.570000]  ip: 10.0.2.15
 [    0.570000]  mask: 255.255.255.0
@@ -79,7 +79,7 @@ To have a more clear understanding of what is happening here: these first three 
 
 Are the equivalent of running the following from the terminal on your local machine:
 
-```
+```sh
 $ python3.6 hello.py
 ```
 
@@ -108,7 +108,7 @@ Once the new script has been created, we’ll place it in the root of the projec
 
 Now, rerun the virtual machine. If everything is working correctly we’ll see the following lines in the Virtual Machine Logs:
 
-```
+```sh
 [    0.500000]  #vorteil-19.10.1 (59f7d8610) SMP 10-10-2019 (Linux version 5.2.20+)
 [    0.500000]  ip: 10.0.2.15
 [    0.500000]  mask: 255.255.255.0

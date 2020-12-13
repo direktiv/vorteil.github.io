@@ -1,6 +1,6 @@
 ---
 title: Project Targets
-nav_order: 3
+nav_order: 5
 has_children: false
 layout: default
 parent: Concepts

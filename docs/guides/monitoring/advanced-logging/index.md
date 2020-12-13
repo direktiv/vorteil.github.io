@@ -15,7 +15,7 @@ In this tutorial we will demonstrate how to configure advanced logging with the 
 
 There are four log types in Vorteil.
 
-**Kernel messages**
+**1. Kernel messages**
 
 All messages on kernel and Vorteil system level are in this category. During runtime these messages are suppressed. If you want to see these messages on-screen (eg. for debugging) you can change the kernel log-level via VCFG settings or through the command-line:
 
@@ -23,19 +23,19 @@ All messages on kernel and Vorteil system level are in this category. During run
 $ vorteil run --system.kernel-args="loglevel=5"
 ```
 
-**System information**
+**2. System information**
 
 These logs relate to system hardware (eg. disk/cpu usage).
 
-**Application logs**
+**3. Application logs**
 
 Logs all messages written to files specified by the logfiles field in a `[[program]]` configuration.
 
-**Stdout Logs**
+**4. Stdout Logs**
 
 Includes all messages printed to stdout on the system, regardless of which `[[program]]` printed it.
 
-**Example: system logging**
+## Example: system logging
 
 This tutorial consists of two parts. The first part describes a basic logging set up, useful for testing. The second part explains more complex application logging. We will use the Tomcat package from the public Vorteil 'apps' repository (https://apps.vorteil.io). Download and extract the package.
 
@@ -79,7 +79,7 @@ Now that we've established a basic logging configuration, let's take a more deta
 
 As mentioned previously, an instance of fluentbit is started if logging is enabled within the VCFG. To configure a logging output, refer to fluentbit's output plugin documentation. In this example we are using the TCP output. All parameters mentioned here can be passed in as key/value pairs via the VCFG file.
 
-**Example: application logging**
+## Example: application logging
 
 We can change our logging configuration to monitor application logs by simply changing the logging type from 'system' to 'programs'. This will send all data from specified log files via TCP to TCP to the configured output. This can be easily configured using a program's logfiles field within the VCFG. In this example Tomcat logs into the `/apache-tomcat-9.0.12/logs/` directory, and uses '.log' as the file suffix. To configure our app to capture these files:
 
@@ -97,7 +97,7 @@ Once again, run the app. After a few seconds, the logging output should appear.
 
 This instructs the Vorteil app to log all data from files ending with '.log' in the `/apache-tomcat-9.0.12/logs/` directory. Because this directory is empty on startup, Vorteil will create the files in memory only, and will not create any real files on the filesystem. Once more, start the Tomcat application. Logs from these files should now appear.
 
-**Example: stdout logging**
+## Example: stdout logging
 
 We can log all messages printed to stdout by setting the logging 'type' to 'stdout'. This will capture any messages printed to stdout, regardless of which program is responsible for them.
 

@@ -1,6 +1,6 @@
 ---
 title: Bootstrapping
-nav_order: 3
+nav_order: 1
 has_children: false
 layout: default
 parent: Concepts
@@ -22,7 +22,7 @@ All bootstrap instructions in a list will complete before the program is execute
 
 The SLEEP instruction causes the launcher thread to pause for the specified duration before proceeding.
 
-```
+```sh
 SLEEP <duration>
 
 Arguments:
@@ -38,7 +38,7 @@ VCFG Example:
 
 The FIND_AND_REPLACE instruction modifies the contents of a file by performing a find-and-replace operation on its entire contents.
 
-```
+```sh
 FIND_AND_REPLACE find=<key> replace=<value> file=<path>
 
 Arguments:
@@ -56,7 +56,7 @@ VCFG Example:
 
 The DEFINE_IF_NOT_DEFINED instruction checks if the launcher thread has the named environment variable. If the variable hasn't been defined, it will be defined and initialized to the provided value. If the variable has already been defined, this instruction does nothing: it does not overwrite existing variables.
 
-```
+```sh
 DEFINE_IF_NOT_DEFINED <key> <value>
 
 Arguments:
@@ -73,7 +73,7 @@ VCFG Example:
 
 The WAIT_FILE instruction will wait for the specified file to exist before the program will be executed.
 
-```
+```sh
 WAIT_FILE <value>
 
 Arguments:
@@ -89,7 +89,7 @@ VCFG Example:
 
 The WAIT_PORT instruction will wait for the specified port(s) to become available on a network interface before the program will be executed.
 
-```
+```sh
 WAIT_PORT [network_interface] <value>...
 
 Arguments:
@@ -105,7 +105,7 @@ VCFG Example:
 
 The GET instruction will execute the GET request and store the response in the file provided by the bootsrap command.
 
-```
+```sh
 GET <url> <path>
 
 Arguments:

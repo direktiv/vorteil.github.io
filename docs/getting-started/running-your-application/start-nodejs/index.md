@@ -21,14 +21,14 @@ This guide isn’t meant to be an introduction to Node.js, but there are a few t
 
 Let’s start by fetching our standalone application for Nodejs and extracting it into a folder.
 
-```
+```sh
 $ vorteil unpack https://apps.vorteil.io/file/vorteil/nodejs ./nodejs/
 $ cd nodejs
 ```
 
 Once inside the newly-created project directory, executing the following command will run the app:
 
-```
+```sh
 $ vorteil run
 Writing image done [===================================================] 100.00% 3s
 Warning: VM has network cards but no defined ports (hypervisor=virtualbox, vm=nodejs-jazp)
@@ -94,7 +94,7 @@ To edit the application and change how it is run we first need to change the VCF
 
 After making these changes we can try running the application using Vorteil again.
 
-```
+```sh
 $ vorteil run
 Writing image done [===================================================] 100.00% 2s
 network settings

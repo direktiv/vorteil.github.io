@@ -23,13 +23,13 @@ For this article, we will be using a simple web server that is generated from th
 
 To begin we need to tell .NET to create a new web application to use with the following command.
 
-```
+```sh
 $ dotnet new web -o /tmp/demo
 ```
 
 After that has completed go into that directory, where we will call ‘dotnet run’ to start the web application. You should be able to visit the page at this address if everything was successful and ‘Hello World!’ should appear in browser.
 
-```
+```sh
 $ cd /tmp/demo
 $ dotnet run
 ```
@@ -40,7 +40,7 @@ Now that we have built the web application and ran it we need to publish the app
 
 To publish the web app first we need to call the following command to tell .NET to use these contents and export into a standalone application.
 
-```
+```sh
 $ dotnet publish --self-contained --runtime=linux-x64 --output /tmp/myapp
 ```
 
@@ -52,24 +52,22 @@ We now need to create the vorteil project and tell Vorteil how we run the .NET a
 
 The command tells Vorteil which binary to point at and which network address that we should bind to. .NET also requires environment variables to be set which can be done in the same command.
 
-```
+```sh
 $ vorteil projects new --program.0.binary /demo \
 --network.0.http 5000 \
 --program.0.env ASPNETCORE_URLS=http://0.0.0.0:5000, DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1 \
 /tmp/myapp 
 ```
 
-If you are on Windows or Mac you are currently unable to do the following step. However you could spawn a Linux Machine and gather the shared objects that way. 
+Now we need to import any shared objects to be able to run the application successfully (Note: you will be unable to complete this step on Windows or Mac, but could spawn a Linux machine and gather the required shared objects from it). The following command will check each binary and import the shared objects that they require if they are on your system.
 
-Now we need to import shared objects to be able to run the application successfully (you will be unable to complete this step on Windows or Mac, but could spawn a Linux machine and gather the required shared objects from it). The following command will check each binary and import the shared objects that they require if they are on your system.
-
-```
+```sh
 $ vorteil import-shared-objects /tmp/myapp
 ```
 
 After creating the new project and importing shared objects make sure you are in the project directory (‘/tmp/myapp’). Typing ‘vorteil run’ should now create a webserver accessible at `localhost:5000`. If port 5000 is already in use, a different port will be chosen at-random (the CLI will inform the user if this occurs).
 
-```
+```sh
 $ cd /tmp/myapp
 $ vorteil run
 ```

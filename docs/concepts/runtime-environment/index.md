@@ -1,6 +1,6 @@
 ---
 title: Vorteil Runtime Environment
-nav_order: 0
+nav_order: 8
 has_children: false
 layout: default
 parent: Concepts
@@ -85,5 +85,5 @@ These variables will have the IPv4 address (as a string) for their respective ne
 The environment variable USERDATA is getting populated differently for each cloud provider.
 
 - Azure: Text in the "Custom data" (Advanced Tab)
-- Google Cloud: Text stored in "Metadata" key "vorteil"
-- Amazon: Text in "User data" (as text)
+- Google Cloud: Text stored in ["Metadata"](https://cloud.google.com/compute/docs/storing-retrieving-metadata) key "vorteil"
+- Amazon: Text in ["User data"](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) (as text)

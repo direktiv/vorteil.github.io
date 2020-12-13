@@ -1,6 +1,6 @@
 ---
 title: Shared objects
-nav_order: 5
+nav_order: 6
 has_children: false
 layout: default
 parent: Concepts
@@ -14,7 +14,7 @@ Not all programs are compiled as monolithic binaries. It is common practice to r
 
 Every program that relies on shared objects requires a special tool called a "linker" to load the shared object. If you run such a program on Vorteil without the linker you'll see an error similar to the following message:
 
-```
+```sh
 can not find linker: /lib64/ld-linux-x86-64.so.2
 ```
 
@@ -25,11 +25,11 @@ If you see this error all you need to do to fix it is to copy the missing linker
 
 If you omit a critical shared object from your package you should generally expect the app to fail immediately with a message similar to the following example:
 
-```
+```sh
 /app: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory
 ```
 
-Fix this error by copying the missing shared object from your system into the package. The exact location of a shared object varies from distribution to distribution, but a search through the "/lib64" and "/lib" directories will usually turn up the file you're looking for.
+Fix this error by copying the missing shared object from your system into the package. The exact location of a shared object varies from distribution to distribution, but a search through the `/lib6`" and `/lib` directories will usually turn up the file you're looking for.
 
 ## Dynamic Loading
 

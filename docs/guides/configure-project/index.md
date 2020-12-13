@@ -45,7 +45,7 @@ ignore = [".vorteilproject"]
 
 Now, when building with the `custom` build target, both "default.vcfg" and "readme.vcfg" will be used and no icon will be set. We can instruct the Vorteil CLI to build using the `custom` target by running the following:
 
-```
+```sh
 vorteil pack my/project/dir:custom
 ```
 

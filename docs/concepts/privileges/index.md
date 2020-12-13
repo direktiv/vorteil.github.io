@@ -1,6 +1,6 @@
 ---
 title: Privileges
-nav_order: 6
+nav_order: 4
 has_children: false
 layout: default
 parent: Concepts
@@ -12,7 +12,7 @@ Vorteil supports running apps with as root, non-root, and superuser privileges. 
 
 For example, look at what happens when the `postgres` package is run with root privileges:
 
-```
+```sh
 $ vorteil run https://apps.vorteil.io/file/vorteil/postgres --program[0].privilege root
 ...
 [0.520000] starting as root, uid 0
@@ -25,7 +25,7 @@ more information on how to properly start the server.
 
 We can overcome this by changing the value of the `--program.0.privilege` field to `user` or `superuser`:
 
-```
+```sh
 $ vorteil run https://apps.vorteil.io/file/vorteil/postgres --program[0].privilege user
 ...
 [0.490000] starting as vorteil, uid 1000
@@ -51,7 +51,7 @@ Notice that the program starts as `vorteil` instead of `root`. In this example, 
 
 If an app requires a specific name for the non-root user, this can be configured by setting the `--system.user` field. By default, this value is `vorteil`.
 
-```
+```sh
 $ vorteil run https://apps.vorteil.io/file/vorteil/postgres --ignore-kernel --program[0].privilege user --system.user postgres
 ...
 [0.510000] starting as postgres, uid 1000

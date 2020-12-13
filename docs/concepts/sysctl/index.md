@@ -8,7 +8,7 @@ parent: Concepts
 
 # Sysctl
 
-Sysctl allows for the modification of kernel attributes, and functions by creating/modifying files im the /proc/sys directory.
+Sysctl allows for the modification of kernel attributes, and functions by creating/modifying files im the `/proc/sys` directory.
 
 ## Example
 VCFG
@@ -20,7 +20,7 @@ VCFG
 
 CLI
 
-```
+```sh
 $ vorteil run ./helloworld --sysctl net.ipv4.ip_forward=1
 ```
 
