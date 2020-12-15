@@ -30,6 +30,13 @@ Download links for Windows installers are listed on [qemu.org](https://www.qemu.
 -   **RHEL/CentOS:** `yum install qemu-kvm`
 -   **SUSE:** `zypper install qemu`
 
+### VMware Workstation and VMware Fusion
+Supports Windows, Mac and Linux. Download links for the VMware Workstation can be found [here](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html) and for VMware fusion can be found [here](https://www.vmware.com/au/products/fusion/fusion-evaluation.html). The Vorteil CLI uses the 'vmrun' binary, provided by either VMware Workstation or Fusion. An example can be seen below on how we can use the virtualizer.
+
+```
+    vorteil run helloworld --platform vmware
+```
+
 ### Hyper-V
 Supports Windows only. Users must [enable Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) and must be a member of the Hyper-V administrator group (instructions [here](https://www.ibm.com/support/knowledgecenter/SSMKFH/com.ibm.apmaas.doc/install/hyperv_config_add_nonadmin_user_hyperv_usergroup.html)).
 
