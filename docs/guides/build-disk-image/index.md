@@ -46,3 +46,23 @@ This command will create "helloworld.vmdk" -- a virtual disk image -- from the p
 ```
 $ vorteil images build helloworld/ --format=raw
 ```
+
+## Hypervisor drivers for manual VM creation
+
+ 
+When creating a machine manually in any of the hypervisors or hypervisor managers (VMware vSphere, QEMU, VirtualBox etc), the most performant drivers have been selected.
+
+As an example, for any VirtualBox VM creation the following drivers need to be selected:
+
+ 
+
+* Network driver: virtio-net-pci
+* Storage drive: virtio-scsi-pci
+
+ 
+
+For VMware:
+
+* Virtual Disk Type: SCSI
+* SCSI Controller: Paravirtualized-scsi
+* Edit the VM's .vmx file and change ethernet0.virtualDev to contain the value vmxnet3.
