@@ -57,7 +57,7 @@ To use the Vorteil package, configure the existing "alpine" vcfg file to run the
   binary = "/usr/bin/dig"
   args = "www.vorteil.io"
 
-[[netowrk]]
+[[network]]
   ip = "dhcp"
 
 [[vm]]
