@@ -87,3 +87,14 @@ The environment variable USERDATA is getting populated differently for each clou
 - Azure: Text in the "Custom data" (Advanced Tab)
 - Google Cloud: Text stored in ["Metadata"](https://cloud.google.com/compute/docs/storing-retrieving-metadata) key "vorteil"
 - Amazon: Text in ["User data"](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) (as text)
+
+If the user data has a key/value JSON format the entries in the list will be added as environment variables to the applications defined in the VCFG file, e.g.
+
+```
+{
+  "MyENV": "value",
+  "MySecondEnv": "value2"
+}
+```
+
+would add the two environment variables *MyENV* and *MySecondEnv* to the apps. The environment variable USERDATA will be still populated with the whole JSON string.

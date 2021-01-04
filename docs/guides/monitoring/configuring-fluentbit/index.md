@@ -21,7 +21,7 @@ Currently, FluentBit 1.6.3 is supported. All of the output plugins are embedded 
 
 Let's say you want to use the [InfluxDB output plugin](https://docs.fluentbit.io/manual/pipeline/outputs/influxdb):
 
-*The influxdb output plugin, allows to flush your records into a InfluxDB time series database. The following instructions assumes that you have a fully operational InfluxDB service running in your system.* 
+*The influxdb output plugin, allows to flush your records into a InfluxDB time series database. The following instructions assumes that you have a fully operational InfluxDB service running in your system.*
 
 Configuration parameters are:
 - Host:  IP address or hostname of the target InfluxDB API service (127.0.0.1)
@@ -35,6 +35,16 @@ So to translate those configuration settings into the Vorteil config it would lo
   config = ["Name= influxdb", "Host=127.0.0.1", "Port=8086", "Database=fluentbit","Sequence_Tag=_seq"]
   type = "programs"
 ```
+
+The *config* string can use environment variables and the value will be replaced during runtime. Only the global environment variables (e.g. IP0, EXT_IP0) and environment variables provided via [cloud user data](../../concepts/runtime-environment/) can be used. A configuration could look like:
+
+```toml
+[[logging]]
+  config = ["Name= influxdb", "Host=$IP0", "Port=$CLOUDVAR", "Database=fluentbit","Sequence_Tag=_seq"]
+  type = "programs"
+```
+
+
 
 ## Example: logging to Splunk
 
