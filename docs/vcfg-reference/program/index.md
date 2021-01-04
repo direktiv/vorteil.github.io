@@ -54,6 +54,9 @@ The repeatable "program" section of a VCFG defines what programs will be execute
   <tr>
     <td><a href="privilege">privilege</a></td>
   </tr>
+  <tr>
+    <td><a href="terminate">terminate</a></td>
+  </tr>
 </table>
 
 ## Example
@@ -69,6 +72,7 @@ The repeatable "program" section of a VCFG defines what programs will be execute
   cwd = "/"
   strace = true
   root = true
+  terminate = "SIGTERM"
 ```
 
 ## CLI Flags
