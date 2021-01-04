@@ -37,7 +37,7 @@ $ chmod +x prep.sh
 ## Step 4: within the “alpine” Vorteil VM, run the VM and ensure the package installs successfully
 
 ```sh
-$ vorteil run —-program[0].binary /prep.sh --vm.disk-size +128MiB
+$ vorteil run --program[0].binary /prep.sh --vm.disk-size +128MiB
 ```
 
 ## Step 5: run it in RECORD mode
@@ -65,4 +65,3 @@ To use the Vorteil package, configure the existing "alpine" vcfg file to run the
   ram = "256 MiB"
   disk-size = "+128 MiB"
 ```
-
