@@ -54,6 +54,9 @@ The `system` section of a VCFG is dedicated to advanced settings effecting the a
   <tr>
     <td><a href="user">user</a></td>
   </tr>
+  <tr>
+    <td><a href="terminate-wait">terminate-wait</a></td>
+  </tr>
 </table>
 
 ## Example
@@ -67,4 +70,5 @@ The `system` section of a VCFG is dedicated to advanced settings effecting the a
   output-mode = "standard"
   filesystem = "ext2"
   user = "vorteil"
+  terminate-wait = 3000
 ```
