@@ -17,6 +17,8 @@ The `terminate` field makes it possible to define what system signal to send to 
 - SIGPWR
 - SIGQUIT
 - SIGSTOP
+- SIGUSR1
+- SIGUSR2
 
 ## Summary
 

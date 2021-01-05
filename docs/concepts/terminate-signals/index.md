@@ -19,6 +19,8 @@ Terminate signals are configured per program and can be configured by setting th
 - SIGPWR
 - SIGQUIT
 - SIGSTOP
+- SIGUSR1
+- SIGUSR2
 
 If a VCFG has no terminate signal set on a program, `SIGTERM` will be used by default.
 
