@@ -47,6 +47,18 @@ This command will create "helloworld.vmdk" -- a virtual disk image -- from the p
 $ vorteil images build helloworld/ --format=raw
 ```
 
+### Building disk from live machine
+
+When running the `vorteil run` command, the disk of the created vorteil machine can be saved if the `--save-disk` flag was provided.
+
+#### Example
+```
+$ vorteil run helloworld/ --save-disk="/home/disks/helloworld.vmdk"
+...
+Copying Disk to /home/disks/helloworld.vmdk  ⠋                            
+Copied Disk
+```
+
 ## Hypervisor drivers for manual VM creation
 
  
