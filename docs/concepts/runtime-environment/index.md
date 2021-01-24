@@ -45,6 +45,10 @@ The following is a list of currently supported environment variables added by th
 - EXT_IP2
 - EXT_IP3
 
+On AWS two additional variables are available:
+- CLOUD_INSTANCE_ID
+- CLOUD_REGION
+
 ### HYPERVISOR
 
 This variable will have one of the following values, depending upon which hypervisor the kernel thinks it is running on.

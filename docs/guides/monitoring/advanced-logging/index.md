@@ -75,9 +75,19 @@ This error indicates that there is no server at 192.168.1.10:3000 accepting logs
 [{"date":1570599209.000048,"cpu_p":13.000000,"user_p":12.000000,"system_p":1.000000,"cpu0.p_cpu":13.000000,"cpu0.p_user":12.000000,"cpu0.p_system":1.000000},{"date":1570599210.000038,"cpu_p":99.000000,"user_p":93.000000,"system_p":6.000000,"cpu0.p_cpu":99.000000,"cpu0.p_user":93.000000,"cpu0.p_system":6.000000},{"date":1570599211.000217,"cpu_p":89.000000,"user_p":87.000000,"system_p":2.000000,"cpu0.p_cpu":89.000000,"cpu0.p_user":87.000000,"cpu0.p_system":2.000000},{"date":1570599212.000099,"cpu_p":0.000000,"user_p":0.000000,"system_p":0.000000,"cpu0.p_cpu":0.000000,"cpu0.p_user":0.000000,"cpu0.p_system":0.000000},{"date":1570599213.000217,"cpu_p":0.000000,"user_p":0.000000,"system_p":0.000000,"cpu0.p_cpu":0.000000,"cpu0.p_user":0.000000,"cpu0......
 ```
 
+The 'system' value contains metrics for cpu, memory, disk access and disk usage. If only a single metric is required they can be accessed as 'vsystem-mem', 'vsystem-cpu', 'vsystem-disk' and 'vsystem-vdisk', e.g.:
+
+```toml
+[[logging]]
+     config = ["Name=tcp", "Host=192.168.1.10", "Port=3000", "Format=json"]
+     type = "vsystem-mem"
+```
+
 Now that we've established a basic logging configuration, let's take a more detailed look at the config field of the configuration.
 
 As mentioned previously, an instance of fluentbit is started if logging is enabled within the VCFG. To configure a logging output, refer to fluentbit's output plugin documentation. In this example we are using the TCP output. All parameters mentioned here can be passed in as key/value pairs via the VCFG file.
+
+
 
 ## Example: application logging
 
