@@ -23,9 +23,9 @@ Each cloud provider has it's own way of allowing custom metadata to be populated
 - Google Cloud: Text stored in ["Metadata"](https://cloud.google.com/compute/docs/storing-retrieving-metadata) key "vorteil"
 - Amazon: Text in ["User data"](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) (as text)
 
-This information can then be used with [Bootstrapping](../concepts/bootstrapping/) options to populate any necessary configuration files.
+This information can then be used with [Bootstrapping](../../../concepts/bootstrapping/) options to populate any necessary configuration files.
 
-For more information about configuration options at runtime, please see [Vorteil Runtime Environment](../concepts/runtime-environment/).
+For more information about configuration options at runtime, please see [Vorteil Runtime Environment](../../../concepts/runtime-environment/).
 
 ## Cloud specific configurations
 
